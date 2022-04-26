@@ -1,0 +1,9 @@
+{
+  "properties": [
+    {
+      "name": "aureka.client.service.url.defaultZone",
+      "type": "java.lang.String",
+      "description": "Description for aureka.client.service.url.defaultZone."
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+resilience4j:
+  #Configuracion de corto circuito
+  circuitbreaker:
+    configs:
+      #Asignamos nombre defecto
+      defecto:
+        # Tamaño de pantalla deslizante por defecto es 100 request
+        sliding-window.size: 6
+        # Taza de falla, por defecto es 50 %
+        failure-rade-threshould: 50
+        # Tiempo de espera en estado abierto del corto circuito, por defecto es 60 segundos
+        wait-duration-in-open-state: 20s
+        # Numero de llamadas permitidas en estado abierto, por defecto son 10
+        permited-number-of-calls-in-half-open-state: 4
+        # Configuracion de porcentaje de umbral de llamadas lentas por defecto es 100%
+        slow-call-rate-threshold: 50
+        # Configuracion de llamada lenta, tiempo maximo de espera de peticion
+        slow-call-duration-threshold: 2s
+    # Asignacion de configuracion al corto circuito
+    instances:
+      # Nombre del corto circuito
+      items:
+        base-config: defecto
+  # Configuracion de time out
+  timelimiter:
+    configs:
+      defecto:
+        # Por defecto es 1s
+        timeout-duration: 2s
+    # Asignacion de configuracion time out a la instancia items
+    instances:
+      items:
+        base-config: defecto
+
+
+
+
