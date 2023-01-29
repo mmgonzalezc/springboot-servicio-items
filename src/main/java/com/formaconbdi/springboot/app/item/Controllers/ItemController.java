@@ -1,9 +1,8 @@
 package com.formaconbdi.springboot.app.item.Controllers;
 
+import com.formacionbdi.springboot.app.commons.model.entity.Producto;
 import com.formaconbdi.springboot.app.item.models.Item;
-import com.formaconbdi.springboot.app.item.models.Producto;
 import com.formaconbdi.springboot.app.item.models.service.ItemService;
-//import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.timelimiter.annotation.TimeLimiter;
 import org.slf4j.Logger;
@@ -22,6 +21,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.CompletableFuture;
+
+//import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 /***
  * RefreshScope Anotacion que nos permite actualizar en tiempo real mediante una url de spring actuator los

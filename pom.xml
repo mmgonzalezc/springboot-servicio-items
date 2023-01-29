@@ -90,7 +90,12 @@
             <artifactId>spring-boot-starter-actuator</artifactId>
             <version>2.6.1</version>
         </dependency>
-
+        <!-- dependencia para importar libreria commons-->
+        <dependency>
+            <groupId>com.formacionbdi.springboot.app.commons</groupId>
+            <artifactId>springboot-servicio-commons</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
 
     </dependencies>
     <dependencyManagement>

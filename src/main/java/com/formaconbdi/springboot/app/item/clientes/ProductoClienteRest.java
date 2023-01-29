@@ -1,6 +1,6 @@
 package com.formaconbdi.springboot.app.item.clientes;
 
-import com.formaconbdi.springboot.app.item.models.Producto;
+import com.formacionbdi.springboot.app.commons.model.entity.Producto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,11 +19,11 @@ public interface ProductoClienteRest {
      * @return
      */
     @GetMapping("/listar")
-    public List<Producto> listar();
+    List<Producto> listar();
 
 
     @GetMapping("/ver/{id}")
-    public Producto detalle(@PathVariable Long id);
+    Producto detalle(@PathVariable Long id);
 
     @PostMapping("/crear")
     Producto crear(@RequestBody Producto producto);

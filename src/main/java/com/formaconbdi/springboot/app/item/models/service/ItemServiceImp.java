@@ -1,7 +1,7 @@
 package com.formaconbdi.springboot.app.item.models.service;
 
+import com.formacionbdi.springboot.app.commons.model.entity.Producto;
 import com.formaconbdi.springboot.app.item.models.Item;
-import com.formaconbdi.springboot.app.item.models.Producto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpMethod;
